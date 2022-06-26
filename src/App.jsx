@@ -56,6 +56,12 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        Feito por <a href="https://github.com/NakamuraNP">Matheus Moreira</a> <br />
+        Direitos de imagem para Netflix <br />
+        Dados pegos pelo site Themoviedb.org
+      </footer>
     </div>
   );
 };
