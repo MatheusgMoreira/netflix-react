@@ -10,8 +10,8 @@
   overflow-x: hidden;
 }
 .movieRow--list {
-  width: 200000px;
   padding-left: 30px;
+  transition: all ease .5s;
 }
 
 .movieRow:hover .movieRow--left,
@@ -48,7 +48,7 @@
   overflow: hidden;
   cursor: pointer;
   opacity: 0;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
 }
 
 .movieRow--left {
@@ -57,4 +57,10 @@
 
 .movieRow--right {
   right: 0;
+}
+
+@media (max-width: 760px) {
+  .movieRow--left, .movieRow--right {
+    opacity: 1;
+  }
 }

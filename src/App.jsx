@@ -31,10 +31,10 @@ export default () => {
 
   useEffect(() => {
     const scrollListener = () => {
-      if(window.scrollY > 10) {
-        setBlackHeader(true)
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
       } else {
-        setBlackHeader(false)
+        setBlackHeader(false);
       }
     };
 
@@ -58,10 +58,20 @@ export default () => {
       </section>
 
       <footer>
-        Feito por <a href="https://github.com/NakamuraNP">Matheus Moreira</a> <br />
+        Feito por <a href="https://github.com/NakamuraNP">Matheus Moreira</a>{" "}
+        <br />
         Direitos de imagem para Netflix <br />
         Dados pegos pelo site Themoviedb.org
       </footer>
+
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+            alt="Carregando"
+          />
+        </div>
+      )}
     </div>
   );
 };
